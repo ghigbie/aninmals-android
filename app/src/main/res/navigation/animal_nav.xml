@@ -5,9 +5,7 @@
     android:id="@+id/animal_nav"
     app:startDestination="@id/listFragment">
 
-    <navigation
-        android:id="@+id/navigation"
-        app:startDestination="@id/listFragment" >
+
         <fragment
             android:id="@+id/listFragment"
             android:name="com.traiingtrack.animals.view.ListFragment"
@@ -17,6 +15,7 @@
                 android:id="@+id/actionDetail"
                 app:destination="@id/detailFragment" />
         </fragment>
+
         <fragment
             android:id="@+id/detailFragment"
             android:name="com.traiingtrack.animals.view.DetailFragment"
@@ -26,5 +25,5 @@
                 android:id="@+id/action_List"
                 app:destination="@id/listFragment" />
         </fragment>
-    </navigation>
+
 </navigation>

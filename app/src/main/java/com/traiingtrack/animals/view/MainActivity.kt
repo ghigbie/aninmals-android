@@ -2,8 +2,6 @@ package com.traiingtrack.animals.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import com.traiingtrack.animals.R
 
 class MainActivity : AppCompatActivity() {
