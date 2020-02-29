@@ -9,6 +9,7 @@
         android:id="@+id/imageAnimal"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:src="@mipmap/ic_launcher"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -18,6 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        style="@style/title"
         app:layout_constraintEnd_toEndOf="@id/imageAnimal"
         app:layout_constraintStart_toStartOf="@id/imageAnimal"
         app:layout_constraintTop_toBottomOf="parent" />
