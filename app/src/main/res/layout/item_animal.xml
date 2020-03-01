@@ -29,6 +29,7 @@
         android:padding="4dp"
         style="@style/title"
         android:gravity="center"
+        android:background="#afff"
         app:layout_constraintEnd_toEndOf="@id/animalImage"
         app:layout_constraintStart_toStartOf="@id/animalImage"
         app:layout_constraintTop_toBottomOf="parent" />
