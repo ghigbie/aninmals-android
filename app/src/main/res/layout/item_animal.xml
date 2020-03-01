@@ -27,12 +27,13 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:padding="4dp"
-        style="@style/title"
+        style="@style/Title"
         android:gravity="center"
         android:background="#afff"
         app:layout_constraintEnd_toEndOf="@id/animalImage"
         app:layout_constraintStart_toStartOf="@id/animalImage"
-        app:layout_constraintTop_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="parent"
+        android:text="@string/animalName"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
