@@ -1,5 +1,5 @@
 package com.traiingtrack.animals.model
 
-data class animal(
+data class Animal(
     val name: String?
 )
