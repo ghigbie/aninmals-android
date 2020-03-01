@@ -1,4 +1,4 @@
-package com.traiingtrack.animals.view
+package com.traiingtrack.animals.view.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

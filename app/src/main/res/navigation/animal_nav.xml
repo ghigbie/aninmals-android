@@ -8,7 +8,7 @@
 
         <fragment
             android:id="@+id/listFragment"
-            android:name="com.traiingtrack.animals.view.ListFragment"
+            android:name="com.traiingtrack.animals.view.view.ListFragment"
             android:label="fragment_list"
             tools:layout="@layout/fragment_list" >
             <action
@@ -18,7 +18,7 @@
 
         <fragment
             android:id="@+id/detailFragment"
-            android:name="com.traiingtrack.animals.view.DetailFragment"
+            android:name="com.traiingtrack.animals.view.view.DetailFragment"
             android:label="fragment_detail"
             tools:layout="@layout/fragment_detail" >
             <action

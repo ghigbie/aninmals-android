@@ -1,4 +1,4 @@
-package com.traiingtrack.animals.view
+package com.traiingtrack.animals.view.view
 
 
 import android.os.Bundle
@@ -6,11 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.NavAction
 import androidx.navigation.NavDirections
 import androidx.navigation.Navigation
 
 import com.traiingtrack.animals.R
+import com.traiingtrack.animals.view.ListFragmentDirections
 import kotlinx.android.synthetic.main.fragment_list.*
 
 
@@ -30,7 +30,8 @@ class ListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         detailButton.setOnClickListener {
-            val action: NavDirections = ListFragmentDirections.actionDetail()
+            val action: NavDirections =
+                ListFragmentDirections.actionDetail()
             Navigation.findNavController(it).navigate(action)
 
         }
