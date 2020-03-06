@@ -28,18 +28,25 @@ class ListFragment : Fragment() {
 
     private lateinit var viewModel: ListViewModel
     private val listAdapater = AnimalListAdapater(arrayListOf())
-    private val animalListDataObserver = Observer<List<Animal>> {list ->
 
+    private val animalListDataObserver = Observer<List<Animal>> {list ->
+        list?.let {
+            animalList.visibility = View.VISIBLE
+            listAdapater.updateAnimalList(it)
+        }
     }
 
     private val loadingLiveDataObserver = Observer<Boolean>{isLoading ->
-
+        loadingView.visibility = if(isLoading) View.VISIBLE else View.GONE
+        if(isLoading){
+            animalList.visibility = View.GONE
+            listError.visibility = View.GONE
+        }
     }
     
     private val errorLiveDataObserver = Observer<Boolean> {isError ->
-
+        listError.visibility = if(isError) View.VISIBLE else View.GONE
     }
-
 
 
     override fun onCreateView(
@@ -54,9 +61,9 @@ class ListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel = ViewModelProviders.of(this).get(ListViewModel::class.java)
-        viewModel.animals.observe(this, animalListDataObserver)
-        viewModel.loading.observe(this, loadingLiveDataObserver)
-        viewModel.loadError.observe(this, errorLiveDataObserver)
+        viewModel.animals.observe(this.viewLifecycleOwner, animalListDataObserver)
+        viewModel.loading.observe(this.viewLifecycleOwner, loadingLiveDataObserver)
+        viewModel.loadError.observe(this.viewLifecycleOwner, errorLiveDataObserver)
         viewModel.refresh()
 
         animalList.apply {
