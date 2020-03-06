@@ -10,7 +10,6 @@ import androidx.navigation.NavDirections
 import androidx.navigation.Navigation
 
 import com.traiingtrack.animals.R
-import com.traiingtrack.animals.view.DetailFragmentDirections
 import kotlinx.android.synthetic.main.fragment_detail.*
 
 /**

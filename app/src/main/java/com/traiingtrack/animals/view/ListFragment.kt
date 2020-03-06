@@ -12,11 +12,11 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.NavDirections
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.ListAdapter
 
 import com.traiingtrack.animals.R
 import com.traiingtrack.animals.model.Animal
 import com.traiingtrack.animals.view.AnimalListAdapater
-import com.traiingtrack.animals.view.ListFragmentDirections
 import com.traiingtrack.animals.viewmodel.ListViewModel
 import kotlinx.android.synthetic.main.fragment_list.*
 
@@ -68,6 +68,7 @@ class ListFragment : Fragment() {
 
         animalList.apply {
             layoutManager = GridLayoutManager(context, 2)
+            adapter = listAdapater
         }
     }
 
